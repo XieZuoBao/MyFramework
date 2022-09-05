@@ -21,18 +21,18 @@ public class Player : MonoBehaviour
     }
     public void MonsterDeadDo()
     {
-        Debug.Log("玩家得奖励-----无参");
+        GameLogger.LogYellow("玩家得奖励-----无参");
     }
 
     public void MonsterDeadDo(float moveSpeed)
     {
-        Debug.Log("玩家得奖励-----一个参数");
+        GameLogger.LogYellow("玩家得奖励-----一个参数");
     }
 
 
     public void MonsterDeadDo(float moveSpeed, string monsterNama)
     {
-        Debug.Log("玩家得奖励-----两个参数");
+        GameLogger.LogYellow("玩家得奖励-----两个参数");
     }
 
 

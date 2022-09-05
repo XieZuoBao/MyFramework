@@ -15,13 +15,14 @@ public class Monster : MonoBehaviour
 {
     private float moveSpeed = 1.5f;
     public string monsterName = "Wolf";
+    public GameObject go;
     private void Start()
     {
-        Dead();
+        Invoke("Dead", 3f);
     }
     void Dead()
     {
-        Debug.Log("Monster dead");
+        GameLogger.Log("Monster dead", go);
         //其他对象在怪物死亡后需要处理的逻辑
         /*
         //1.玩家得奖励

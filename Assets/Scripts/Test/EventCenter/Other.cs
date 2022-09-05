@@ -21,16 +21,16 @@ public class Other : MonoBehaviour
     }
     public void OtherWithMonsterDeadDo()
     {
-        Debug.Log("其他 逻辑-----无参");
+        GameLogger.LogGreen("其他 逻辑-----无参");
     }
     public void OtherWithMonsterDeadDo(float info)
     {
-        Debug.Log("其他 逻辑-----一个参数");
+        GameLogger.LogGreen("其他 逻辑-----一个参数");
     }
 
     public void OtherWithMonsterDeadDo(float info, string info2)
     {
-        Debug.Log("其他 逻辑-----两个参数");
+        GameLogger.LogGreen("其他 逻辑-----两个参数");
     }
 
 

@@ -62,4 +62,9 @@ public class GlobalsDefine
     /// 声效默认音量大小
     /// </summary>
     public const float DEFAULT_SOUND_VOLUME = 1.0F;
+
+    /// <summary>
+    /// 游戏帧频
+    /// </summary>
+    public const int GAME_FRAME_RATE = 30;
 }

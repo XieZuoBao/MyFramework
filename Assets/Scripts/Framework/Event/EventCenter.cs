@@ -54,7 +54,7 @@ public class EventCenter : BaseSingleton<EventCenter>
         }
 
         else//没有对应的事件监听
-            Debug.LogError("事件移除有误,请检测----" + eventName);
+            GameLogger.LogError("事件移除有误,请检测----" + eventName);
     }
     /// <summary>
     /// 事件分发
@@ -110,7 +110,7 @@ public class EventCenter : BaseSingleton<EventCenter>
         }
 
         else//没有对应的事件监听
-            Debug.LogError("事件移除有误,请检测----" + eventName);
+            GameLogger.LogError("事件移除有误,请检测----" + eventName);
     }
     /// <summary>
     /// 事件分发
@@ -166,7 +166,7 @@ public class EventCenter : BaseSingleton<EventCenter>
         }
 
         else//没有对应的事件监听
-            Debug.LogError("事件移除有误,请检测----" + eventName);
+            GameLogger.LogError("事件移除有误,请检测----" + eventName);
     }
     /// <summary>
     /// 事件分发

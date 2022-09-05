@@ -22,17 +22,17 @@ public class Task : MonoBehaviour
 
     public void TaskWithMonsterDeadDo()
     {
-        Debug.Log("刷新任务记录-----无参");
+        GameLogger.LogCyan("刷新任务记录-----无参");
     }
 
     public void TaskWithMonsterDeadDo(float info)
     {
-        Debug.Log("刷新任务记录-----一个参数");
+        GameLogger.LogCyan("刷新任务记录-----一个参数");
     }
 
     public void TaskWithMonsterDeadDo(float info, string info2)
     {
-        Debug.Log("刷新任务记录-----两个参数");
+        GameLogger.LogCyan("刷新任务记录-----两个参数");
     }
 
     private void OnDestroy()
