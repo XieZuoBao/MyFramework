@@ -1,4 +1,4 @@
-﻿/*
+/*
  * 
  *      Title:  基础框架
  * 
@@ -29,7 +29,7 @@ public enum JoyStick_Type
     FOLLOW,
 }
 
-public class JoyStickPanel : UIBase
+public class JoyStickPanel : MonoBehaviour
 {
     public JoyStick_Type joyStick_Type = JoyStick_Type.FIXED;
     private float maxRadius = 240;
@@ -42,9 +42,9 @@ public class JoyStickPanel : UIBase
 
     private void Start()
     {
-        imgTouchRect = GetComponentAtChildren<Image>("ImgTouchRect");
-        imgBg = GetComponentAtChildren<Image>("ImgBg");
-        imgControl = GetComponentAtChildren<Image>("ImgControl");
+        imgTouchRect = transform.GetChildByName("ImgTouchRect").GetComponent<Image>();
+        imgBg = transform.GetChildByName("ImgBg").GetComponent<Image>();
+        imgControl = transform.GetChildByName("ImgControl").GetComponent<Image>();
         //添加鼠标监听事件---按下,抬起,拖拽三个事件
         UIMgr.AddCustomEventListener(imgTouchRect, EventTriggerType.PointerDown, PointerDown);
         UIMgr.AddCustomEventListener(imgTouchRect, EventTriggerType.PointerUp, PointerUp);
@@ -60,7 +60,7 @@ public class JoyStickPanel : UIBase
     /// <param name="data"></param>
     private void PointerDown(BaseEventData data)
     {
-        //Debug.Log("PinterDown");
+        //GameLogger.Log("PinterDown");
         //按下显示
         imgBg.gameObject.SetActive(true);
         //非固定摇杆,手指按下时,将摇杆设置在手指按下点
@@ -84,7 +84,7 @@ public class JoyStickPanel : UIBase
     /// <param name="data"></param>
     private void PointerUp(BaseEventData data)
     {
-        //Debug.Log("PinterUp");
+        //GameLogger.Log("PinterUp");
         imgControl.transform.localPosition = Vector2.zero;
 
         //分发摇杆方向向量
@@ -101,7 +101,7 @@ public class JoyStickPanel : UIBase
     /// <param name="data"></param>
     private void Drag(BaseEventData data)
     {
-        //Debug.Log("Drag");
+        //GameLogger.Log("Drag");
         Vector2 localPos;
         //屏幕坐标转相对本地坐标
         RectTransformUtility.ScreenPointToLocalPointInRectangle(

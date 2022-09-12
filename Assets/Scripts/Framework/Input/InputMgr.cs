@@ -1,16 +1,10 @@
-﻿/*
- * 
- *      Title:  基础框架
- * 
- *             
- *      Description: 
- *              输入控制模块
- *              管理input输入的相关逻辑           
- ***/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 输入控制模块:管理input输入的相关逻辑
+/// </summary>
 public class InputMgr : BaseSingleton<InputMgr>
 {
     private bool isStart = false;

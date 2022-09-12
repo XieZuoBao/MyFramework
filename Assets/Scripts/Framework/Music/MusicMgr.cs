@@ -1,16 +1,10 @@
-﻿/*
- * 
- *      Title:  基础框架
- *           
- *      Description: 
- *              背景音乐,音效管理模块
- *              统一管理背景音乐,音效相关的逻辑
- *              ***音效的对象池管理还没有实现***     
- ***/
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// 音效管理模块:统一管理背景音乐,音效相关的逻辑
+/// </summary>
 public class MusicMgr : BaseSingleton<MusicMgr>
 {
     private string bgMusicGoName = GlobalsDefine.BG_MUSIC_GO_NAME;      //背景音效组件依附对象(new出来的)的名称
@@ -51,14 +45,14 @@ public class MusicMgr : BaseSingleton<MusicMgr>
             bgMusic = go.AddComponent<AudioSource>();
         }
         //异步加载背景音乐,加载完成播放
-        ResMgr.Instance.LoadResourceAsync<AudioClip>(path, (clip) =>
-        {
-            bgMusic.clip = clip;
-            bgMusic.loop = true;
-            bgMusic.playOnAwake = false;
-            bgMusic.volume = bgValue;
-            bgMusic.Play();
-        });
+        //ResMgr.Instance.LoadResourceAsync<AudioClip>(path, (clip) =>
+        //{
+        //    bgMusic.clip = clip;
+        //    bgMusic.loop = true;
+        //    bgMusic.playOnAwake = false;
+        //    bgMusic.volume = bgValue;
+        //    bgMusic.Play();
+        //});
     }
 
     /// <summary>
@@ -106,18 +100,18 @@ public class MusicMgr : BaseSingleton<MusicMgr>
         if (soundGo == null)
             soundGo = new GameObject(soundGoName);
         //异步加载音效,加载完毕后给游戏对象添加音效组件
-        ResMgr.Instance.LoadResourceAsync<AudioClip>(path, (clip) =>
-        {
-            AudioSource source = soundGo.AddComponent<AudioSource>();
-            source.clip = clip;
-            source.loop = isLoop;
-            source.playOnAwake = false;
-            source.volume = soundValue;
-            source.Play();
-            soundList.Add(source);
-            if (callBack != null)
-                callBack.Invoke(source);
-        });
+        //ResMgr.Instance.LoadResourceAsync<AudioClip>(path, (clip) =>
+        //{
+        //    AudioSource source = soundGo.AddComponent<AudioSource>();
+        //    source.clip = clip;
+        //    source.loop = isLoop;
+        //    source.playOnAwake = false;
+        //    source.volume = soundValue;
+        //    source.Play();
+        //    soundList.Add(source);
+        //    if (callBack != null)
+        //        callBack.Invoke(source);
+        //});
     }
 
     /// <summary>

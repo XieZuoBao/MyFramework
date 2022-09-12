@@ -1,16 +1,11 @@
-﻿/*
- * 
- *      Title:  基础框架
- *             
- *      Description:    事件中心模块
- *                      单例模式对象
- *                      观察者设计模式
- *                      降低程序耦合性,减少程序复杂度             
- ***/
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// 事件中心模块
+/// <para>观察者设计模式:降低程序耦合性,减少程序复杂度</para>
+/// </summary>
 public class EventCenter : BaseSingleton<EventCenter>
 {
     //事件名称-监听此事件对应的委托们(可以是多个)

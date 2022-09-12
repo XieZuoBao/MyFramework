@@ -1,17 +1,12 @@
-/*
- * 
- *      Title:ÊµÏÖÈÕÖ¾ÉÏ´«µ½·şÎñÆ÷µÄ¹¦ÄÜ
- * 
- *             
- *      Description: ÓÃĞ¡Æ¤web·şÎñÆ÷ÊµÏÖ
- *           
- *              
- ***/
 using System.Collections;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 
+/// <summary>
+/// å®ç°æ—¥å¿—ä¸Šä¼ åˆ°æœåŠ¡å™¨çš„åŠŸèƒ½
+/// <para>ç”¨å°çš®webæœåŠ¡å™¨å®ç°</para>
+/// </summary>
 public class LogUploader : MonoBehaviour
 {
     private static string LOG_UPLOAD_URL = "http://127.0.0.1:7890/upload_log.php";
@@ -24,27 +19,27 @@ public class LogUploader : MonoBehaviour
     }
 
     /// <summary>
-    /// ÉÏ±¨ÈÕÖ¾µ½·şÎñ¶Ë
+    /// ä¸ŠæŠ¥æ—¥å¿—åˆ°æœåŠ¡ç«¯
     /// </summary>
-    /// <param name="url">http½Ó¿Ú</param>
-    /// <param name="desc">ÃèÊö</param>
+    /// <param name="url">httpæ¥å£</param>
+    /// <param name="desc">æè¿°</param>
     private IEnumerator UploadLog(string logFilePath, string url, string desc)
     {
         var fileName = Path.GetFileName(logFilePath);
         var data = ReadLogFile(logFilePath);
         WWWForm form = new WWWForm();
-        // ÈûÈëÃèÊö×Ö¶Î£¬×Ö¶ÎÃûÓë·şÎñ¶ËÔ¼¶¨ºÃ
+        // å¡å…¥æè¿°å­—æ®µï¼Œå­—æ®µåä¸æœåŠ¡ç«¯çº¦å®šå¥½
         form.AddField("desc", desc);
-        // ÈûÈëÈÕÖ¾×Ö½ÚÁ÷×Ö¶Î£¬×Ö¶ÎÃûÓë·şÎñ¶ËÔ¼¶¨ºÃ
+        // å¡å…¥æ—¥å¿—å­—èŠ‚æµå­—æ®µï¼Œå­—æ®µåä¸æœåŠ¡ç«¯çº¦å®šå¥½
         form.AddBinaryData("logfile", data, fileName, "application/x-gzip");
-        // Ê¹ÓÃUnityWebRequest
+        // ä½¿ç”¨UnityWebRequest
         UnityWebRequest request = UnityWebRequest.Post(url, form);
         var result = request.SendWebRequest();
 
         while (!result.isDone)
         {
             yield return null;
-            //Debug.Log ("ÉÏ´«½ø¶È: " + request.uploadProgress);
+            //Debug.Log ("ä¸Šä¼ è¿›åº¦: " + request.uploadProgress);
         }
         if (!string.IsNullOrEmpty(request.error))
         {
@@ -52,7 +47,7 @@ public class LogUploader : MonoBehaviour
         }
         else
         {
-            GameLogger.Log("ÈÕÖ¾ÉÏ´«Íê±Ï, ·şÎñÆ÷·µ»ØĞÅÏ¢: " + request.downloadHandler.text);
+            GameLogger.Log("æ—¥å¿—ä¸Šä¼ å®Œæ¯•, æœåŠ¡å™¨è¿”å›ä¿¡æ¯: " + request.downloadHandler.text);
         }
         request.Dispose();
     }
@@ -66,7 +61,7 @@ public class LogUploader : MonoBehaviour
             int index = 0;
             long len = fs.Length;
             data = new byte[len];
-            // ¸ù¾İÄãµÄĞèÇó½øĞĞÏŞÁ÷¶ÁÈ¡
+            // æ ¹æ®ä½ çš„éœ€æ±‚è¿›è¡Œé™æµè¯»å–
             int offset = data.Length > 1024 ? 1024 : data.Length;
             while (index < len)
             {

@@ -1,14 +1,3 @@
-/*
- * 
- *      Title:运行时对日志进行预览
- * 
- *             
- *      Description: 在PC环境下按F4，在移动端使用四根手指头同时点击屏幕即可打开日志预览窗口
- *           
- *              
- ***/
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LogCat : MonoBehaviour
@@ -28,7 +17,7 @@ public class LogCat : MonoBehaviour
 
     private void Start()
     {
-        Application.logMessageReceivedThreaded += logCallBack;
+        Application.logMessageReceivedThreaded += LogCallBack;
 
         m_scrollViewRect = new Rect(0, 0, Screen.width, Screen.height * 0.9f);
         m_lblStyle = new GUIStyle();
@@ -37,7 +26,7 @@ public class LogCat : MonoBehaviour
         m_lblStyle.fontSize = 25;
     }
 
-    private void logCallBack(string condition, string stackTrace, LogType type)
+    private void LogCallBack(string condition, string stackTrace, LogType type)
     {
         //if(type ==LogType.Error || type == LogType.Exception || type == LogType.Assert)
         {

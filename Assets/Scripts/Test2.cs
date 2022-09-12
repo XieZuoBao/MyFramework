@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,7 +28,7 @@ public class Test2 : MonoBehaviour
         GameLogger.LogRed("66666");
         GameLogger.LogWarning("77777");
 
-        GameLogger.UploadLog("上传日志测试");
+        //GameLogger.UploadLog("上传日志测试");
 
     }
 }

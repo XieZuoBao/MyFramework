@@ -1,17 +1,11 @@
-﻿/*
- * 
- *      Title:  基础框架
- * 
- *             
- *      Description: 
- *              缓存池模块
- *              
- ***/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// 缓存池模块
+/// </summary>
 public class PoolMgr : BaseSingleton<PoolMgr>
 {
     //new出来的缓存池容器根节点名称
@@ -42,11 +36,11 @@ public class PoolMgr : BaseSingleton<PoolMgr>
             //go = GameObject.Instantiate(Resources.Load<GameObject>(poolName));
             //go.name = poolName;
             //用异步加载资源的方式替换
-            ResMgr.Instance.LoadResourceAsync<GameObject>(poolName, (o) =>
-            {
-                o.name = poolName;
-                callBack(o);
-            });
+            //ResMgr.Instance.LoadResourceAsync<GameObject>(poolName, (o) =>
+            //{
+            //    o.name = poolName;
+            //    callBack(o);
+            //});
         }
     }
 

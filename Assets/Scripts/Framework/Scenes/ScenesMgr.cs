@@ -1,17 +1,11 @@
-﻿/*
- * 
- *      Title:  基础框架
- *             
- *      Description: 
- *              场景加载模块
- *              给外部提供同步,异步加载场景的方法
- *                          
- ***/
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// 场景加载模块:给外部提供同步,异步加载场景的方法
+/// </summary>
 public class ScenesMgr : BaseSingleton<ScenesMgr>
 {
     /// <summary>
