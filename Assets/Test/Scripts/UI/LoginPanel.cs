@@ -22,8 +22,8 @@ public class LoginPanel : UIBasePanel
     {
         //窗体信息
         CurUIInfo.panelType = UIPanelType.Panel;
-        CurUIInfo.showMode = UIPanelShowMode.HideOther;
-        CurUIInfo.lucencyType = UIPanelLucencyType.Lucency;
+        //CurUIInfo.showMode = UIPanelShowMode.HideOther;
+        //CurUIInfo.lucencyType = UIPanelLucencyType.Lucency;
     }
 
     private void Start()

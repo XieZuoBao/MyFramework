@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8">
 <root>
-    <item id="1" panelName="LogonPanel" path="Assets/Test/Prefabs/Panel/LogonPanel.prefab"/>
-    <item id="2" panelName="SelectHeroPanel" path="Assets/Test/Prefabs/Panel/SelectHeroPanel.prefab"/>
-    <item id="3" panelName="MainPanel" path="Assets/Test/Prefabs/Panel/MainPanel.prefab"/>
-    <item id="4" panelName="ConfirmPopupPanel" path="Assets/Test/Prefabs/PopupPanel/ConfirmPopupPanel.prefab"/>
-    <item id="5" panelName="GoodsInfoPopupPanel" path="Assets/Test/Prefabs/PopupPanel/GoodsInfoPopupPanel.prefab"/>
-    <item id="6" panelName="MarketPopupPanel" path="Assets/Test/Prefabs/PopupPanel/MarketPopupPanel.prefab"/>
-    <item id="7" panelName="HeroInfo" path="Assets/Test/Prefabs/Fixed/HeroInfo.prefab"/>
-    <item id="8" panelName="APanel" path="Assets/Test/Prefabs/Panel/APanel.prefab"/>
+    <item id="1" panelName="APanel" path="Assets/Test/Prefabs/Panel/APanel.prefab"/>
+    <item id="2" panelName="BPanel" path="Assets/Test/Prefabs/Panel/BPanel.prefab"/>
+    <item id="3" panelName="CPanel" path="Assets/Test/Prefabs/Panel/CPanel.prefab"/>
+    <item id="4" panelName="DPanel" path="Assets/Test/Prefabs/Panel/DPanel.prefab"/>
+    <item id="5" panelName="EPanel" path="Assets/Test/Prefabs/Panel/EPanel.prefab"/>
+    <item id="6" panelName="FPanel" path="Assets/Test/Prefabs/Panel/FPanel.prefab"/>
+    <item id="7" panelName="APopPanel" path="Assets/Test/Prefabs/PopupPanel/APopPanel.prefab"/>
+    <item id="8" panelName="BPopPanel" path="Assets/Test/Prefabs/PopupPanel/BPopPanel.prefab"/>
+    <item id="9" panelName="CPopPanel" path="Assets/Test/Prefabs/PopupPanel/CPopPanel.prefab"/>
+    <item id="10" panelName="DPopPanel" path="Assets/Test/Prefabs/PopupPanel/DPopPanel.prefab"/>
+    <item id="11" panelName="EPopPanel" path="Assets/Test/Prefabs/PopupPanel/EPopPanel.prefab"/>
+    <item id="12" panelName="FPopPanel" path="Assets/Test/Prefabs/PopupPanel/FPopPanel.prefab"/>
 </root>

@@ -2,42 +2,62 @@ return
 {	
 	{
 		id = 1,
-		panelName = 'LogonPanel',
-		path = 'Assets/Test/Prefabs/Panel/LogonPanel.prefab'
+		panelName = 'APanel',
+		path = 'Assets/Test/Prefabs/Panel/APanel.prefab'
 	},
 	{
 		id = 2,
-		panelName = 'SelectHeroPanel',
-		path = 'Assets/Test/Prefabs/Panel/SelectHeroPanel.prefab'
+		panelName = 'BPanel',
+		path = 'Assets/Test/Prefabs/Panel/BPanel.prefab'
 	},
 	{
 		id = 3,
-		panelName = 'MainPanel',
-		path = 'Assets/Test/Prefabs/Panel/MainPanel.prefab'
+		panelName = 'CPanel',
+		path = 'Assets/Test/Prefabs/Panel/CPanel.prefab'
 	},
 	{
 		id = 4,
-		panelName = 'ConfirmPopupPanel',
-		path = 'Assets/Test/Prefabs/PopupPanel/ConfirmPopupPanel.prefab'
+		panelName = 'DPanel',
+		path = 'Assets/Test/Prefabs/Panel/DPanel.prefab'
 	},
 	{
 		id = 5,
-		panelName = 'GoodsInfoPopupPanel',
-		path = 'Assets/Test/Prefabs/PopupPanel/GoodsInfoPopupPanel.prefab'
+		panelName = 'EPanel',
+		path = 'Assets/Test/Prefabs/Panel/EPanel.prefab'
 	},
 	{
 		id = 6,
-		panelName = 'MarketPopupPanel',
-		path = 'Assets/Test/Prefabs/PopupPanel/MarketPopupPanel.prefab'
+		panelName = 'FPanel',
+		path = 'Assets/Test/Prefabs/Panel/FPanel.prefab'
 	},
 	{
 		id = 7,
-		panelName = 'HeroInfo',
-		path = 'Assets/Test/Prefabs/Fixed/HeroInfo.prefab'
+		panelName = 'APopPanel',
+		path = 'Assets/Test/Prefabs/PopupPanel/APopPanel.prefab'
 	},
 	{
 		id = 8,
-		panelName = 'APanel',
-		path = 'Assets/Test/Prefabs/Panel/APanel.prefab'
+		panelName = 'BPopPanel',
+		path = 'Assets/Test/Prefabs/PopupPanel/BPopPanel.prefab'
+	},
+	{
+		id = 9,
+		panelName = 'CPopPanel',
+		path = 'Assets/Test/Prefabs/PopupPanel/CPopPanel.prefab'
+	},
+	{
+		id = 10,
+		panelName = 'DPopPanel',
+		path = 'Assets/Test/Prefabs/PopupPanel/DPopPanel.prefab'
+	},
+	{
+		id = 11,
+		panelName = 'EPopPanel',
+		path = 'Assets/Test/Prefabs/PopupPanel/EPopPanel.prefab'
+	},
+	{
+		id = 12,
+		panelName = 'FPopPanel',
+		path = 'Assets/Test/Prefabs/PopupPanel/FPopPanel.prefab'
 	}
 }

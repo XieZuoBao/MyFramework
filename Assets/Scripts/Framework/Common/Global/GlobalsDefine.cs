@@ -10,57 +10,16 @@ public enum UIPanelType
     /// 全屏窗体
     /// </summary>
     Panel,
-    /// <summary>
-    /// 固定窗体
-    /// </summary>
-    Fixed,
+    ///// <summary>
+    ///// 固定窗体
+    ///// </summary>
+    //Fixed,
     /// <summary>
     /// 弹出窗体
     /// </summary>
     Popup,
 }
 
-/// <summary>
-/// UI窗体显示类型
-/// </summary>
-public enum UIPanelShowMode
-{
-    /// <summary>
-    /// 普通
-    /// </summary>
-    Normal,
-    /// <summary>
-    /// 方向切换(Popup)
-    /// </summary>
-    ReverseChange,
-    /// <summary>
-    /// 显示指定窗体并隐藏其他窗体
-    /// </summary>
-    HideOther,
-}
-
-/// <summary>
-/// UI窗体透明度类型
-/// </summary>
-public enum UIPanelLucencyType
-{
-    /// <summary>
-    /// 完全透明,不能穿透
-    /// </summary>
-    Lucency,
-    /// <summary>
-    /// 半透明,不能穿透
-    /// </summary>
-    Translucene,
-    /// <summary>
-    /// 低透明度,不能穿透
-    /// </summary>
-    ImPenetrable,
-    /// <summary>
-    /// 可以穿透
-    /// </summary>
-    Pentrate,
-}
 #endregion
 
 /// <summary>
@@ -89,7 +48,7 @@ public class GlobalsDefine
     /// </summary>
     public const string CANVAS_NORMAL_NODE_NAME = "Normal";
     /// <summary>
-    /// 固定窗体挂点
+    /// 固定窗体挂点(暂未用到)
     /// </summary>
     public const string CANVAS_FIXED_NODE_NAME = "Fixed";
     /// <summary>
@@ -110,11 +69,7 @@ public class GlobalsDefine
     /// <summary>
     /// 半透明遮罩配色
     /// </summary>
-    public static readonly Color TRANSLUCENE_COLOR = new Color(0, 0, 0, 128.0f / 255);
-    /// <summary>
-    /// 低透明度遮罩配色
-    /// </summary>
-    public static readonly Color IMPENETRABLE_COLOR = new Color(0, 0, 0, 200.0f / 255);
+    public static readonly Color LUCENCY_COLOR = new Color(0, 0, 0, 128.0f / 255);
     #endregion
 
     #region 预设路径常量

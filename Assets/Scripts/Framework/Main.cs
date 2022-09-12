@@ -74,7 +74,7 @@ public class Main : MonoBehaviour
         I18N.Instance.Init();
         //测试代码
         RedPointTestData.Instance.Init();
-        UIMgr.Instance.ShowPanel("LogonPanel");
+        UIMgr.Instance.ShowPanel<APanel>(UIPanelType.Panel);
 
         //图集管理器
     }
