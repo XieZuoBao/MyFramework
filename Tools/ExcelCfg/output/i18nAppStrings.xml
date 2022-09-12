@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8">
+<root>
+    <item id="1" zhCn="账号" zhTw="帳號" english="Account"/>
+    <item id="2" zhCn="密码" zhTw="密碼" english="Password"/>
+    <item id="3" zhCn="登陆" zhTw="等陸" english="Login"/>
+</root>
